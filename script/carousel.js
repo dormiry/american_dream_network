@@ -13,7 +13,7 @@ const tvWidth = document.querySelector('.tv').width;
 
 // Arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index * 4 + 'px';
+    slide.style.left = `${slideWidth * index * 4}px`;
 };
 
 slides.forEach(setSlidePosition);
