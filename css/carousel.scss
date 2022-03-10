@@ -1,0 +1,132 @@
+$color-bg: #F2EEE5;
+$color-type: #0D0100;
+$color-type-deselected: #0D010057;
+$color-accent-6: #FF5C38;
+
+$main-h: 90vh; 
+$main-w: 80vw;
+$footer-h: 8vh;
+$screen-w: 75.7312%;
+$panel-w: 24.268%;
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.carousel {
+    height: $main-h - $footer-h;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+
+}
+
+.carousel__track-container {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.carousel__track {
+    position: relative;
+    height: inherit;
+    list-style: none;
+    transition: transform 400ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: inherit;
+    width: 100%;
+    
+}
+
+.carousel__image {
+    height: $main-h - $footer-h;
+ }
+ 
+
+// LEFT - RIGHT INDICATORS
+
+.carousel__button {
+    background: $color-type;
+    height: 75px;
+    border: 0;
+    cursor: pointer;
+}
+
+.arrow {
+    height: 33px;
+    width: 21px;
+    fill: $color-bg;
+}
+
+.carousel__button:hover .arrow {
+    transition-duration: 0.5s;
+    fill: $color-accent-6;
+    
+}
+
+.carousel__button svg {
+    width: 21px;
+}
+
+.carousel__nav {
+    position: absolute;
+    background: transparent;
+    top: 5.8vh;
+    right:0;
+    width: 39%;
+    height: 14vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+} 
+
+.carousel__indicator {
+    background: transparent;
+    height: 2vh;
+    min-width: 10px;
+    width: 1.5vw;
+    border: 0;
+    cursor: pointer;
+} 
+
+// Channel Switch locations
+
+.two {
+    margin-top: -1.2vh;
+    margin-left: 1.7vw;
+}
+
+.three {
+    margin-left: 2.8vw;
+    margin-top: 1vh;
+    margin-bottom: 1.7vh;
+}
+
+.four {
+    margin-left: 2.8vw;
+    margin-bottom: 1.3vh;
+}
+
+.five {
+    margin-left: 1.7vw;
+}
+
+.carousel__indicator.current-slide {
+    color: $color-type;
+}
+
+.is-hidden .arrow {
+    display: none;
+}
+
+.hidden-power-off .arrow {
+    display: none;
+}

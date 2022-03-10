@@ -1,0 +1,264 @@
+$color-bg: #F2EEE5;
+$color-type: #0D0100;
+$color-type-deselected: #BBABAA;
+$color-accent-6: #FF5C38;
+$border-box: #0D0100 4px solid;
+
+$main-h: 90vh; 
+$main-w: 80vw;
+$footer-h: 8vh;
+$footer-minh: 20px;
+$screen-w: 75.7312%;
+$panel-w: 24.268%;
+
+
+/* TYPE STYLES & FORMAT */
+    @import url("https://use.typekit.net/hwd3hoy.css"); 
+
+    @font-face {
+        font-family: "Athletic-Condensed";
+        src: url("/assets/Athletic Condensed Bold.otf");
+        font-display:auto;
+        font-style:normal;
+        font-weight:700;
+    }
+
+    h1 { 
+        color: $color-bg;
+        font-family: address-sans-pro, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        color: $color-type;
+        font-family: address-sans-pro, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.25rem;
+    }
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    background-color: $color-bg;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* HEAD (Long div at top) */
+
+.head {
+    width: 100vw;
+    height: 100vh - $main-h;
+    border-bottom: $border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* MAIN CONTENT (Everything below .head )*/
+
+.main-content  {
+    height: $main-h;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+
+/*  L + R WING */
+
+.left-wing, .right-wing {
+    height: $main-h;
+    min-width: 10vw;
+    width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+}
+
+.left-wing__mid-box, .right-wing__mid-box {
+    background-color: $color-accent-6;
+    height: 2vh;
+}
+
+.left-wing__bottom-box, .right-wing__bottom-box  {
+    border-top: $border-box;
+    background-color: $color-accent-6;
+    height: 30%;
+}
+
+
+
+/*  MIDDLE CONTENT */
+
+.middle-content {
+    height: $main-h;
+    border-right: $border-box;
+    border-left: $border-box;
+    width: fit-content;
+}
+
+/* TV STYLES */
+
+.tv {
+    height: $main-h - $footer-h;
+    width: 100%;
+    display:  flex;
+    flex-flow: row nowrap;
+    background-color: $color-type;
+    overflow: hidden;
+}
+
+// tv-screen
+
+.tv__screen {
+    height: $main-h - $footer-h;
+    position: relative;
+    width: $screen-w;
+
+}
+.tv__img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+}
+
+.tv__overlay {
+    height: inherit;
+    mix-blend-mode: multiply;
+}
+
+.tv__start-animation {
+    height: inherit;
+    position: absolute;
+    width:auto;
+    top:0;
+    left: -1.8vw;
+    overflow: hidden;
+}
+
+.tv__off-animation {
+    height: inherit;
+    position: absolute;
+    width:auto;
+    top:0;
+    left: -1.8vw;
+    overflow: hidden;
+}
+
+// tv-panel
+
+.tv__panel {
+    position: relative;
+    height: $main-h - $footer-h;
+    width: 100% - $screen-w;
+    margin-left: -1px;
+
+}
+
+.control-panel {
+    height: inherit;
+    width:auto;
+}
+
+.power-switch {
+    position: absolute;
+    top: 10.5vh;
+    left:0;
+    height: 4.5vh;
+} .power-switch:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.channel-switch {
+    position: absolute;
+    top: 7.65vh;
+    left:0;
+    height: 9.3vh;
+} 
+.channel-switch:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.carousel__nav:hover .channel-switch {
+    transform: scale(1.05);
+}
+
+.instructions {
+    position: absolute;
+    top: 48vh;
+    left:0;
+    height: 29vh;
+} .instructions:hover {
+    transform: scale(1.12);
+    cursor: pointer;
+}
+
+/* VOLUME SLIDER */
+
+#player {
+    position: absolute;
+	top: 30vh;
+    left: 0;
+    height: 6vh;
+    width: 99%;
+}
+
+    #volume {
+	position: absolute;
+	height: 6vh;
+	width: 100%;
+
+	.ui-slider-range-min {
+		height: 5vh;
+		width: 5px;
+		position: absolute;
+		border: none;
+  		outline: none;
+	}
+	
+	.ui-slider-handle {
+        height: 5vh;
+        width: 100%;
+	  	background: url('volume-switch.png') no-repeat; 
+        background-size: auto 4.65vh;
+		position: absolute;
+        border: none;
+  		outline: none;
+		cursor: pointer;
+	} .ui-slider-handle:hover {
+        transform: scale(1.05);
+        cursor: grab;
+         
+    }
+}
+
+/* FOOTER */
+
+.foot__lbox, .foot__rbox {
+    background-color: $color-accent-6;
+    height: $footer-h;
+    border-top: $border-box;
+}
+
+
+.foot__center {
+    height: $footer-h;
+    min-height: $footer-minh;
+    border-top: $border-box;
+    padding-top: 6px;
+    background-color: $color-accent-6;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+}

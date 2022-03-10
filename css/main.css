@@ -1,0 +1,288 @@
+/* TYPE STYLES & FORMAT */
+@import url("https://use.typekit.net/hwd3hoy.css");
+@font-face {
+  font-family: "Athletic-Condensed";
+  src: url("/assets/Athletic Condensed Bold.otf");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  color: #F2EEE5;
+  font-family: address-sans-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+}
+
+h2 {
+  color: #0D0100;
+  font-family: address-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.25rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #F2EEE5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/* HEAD (Long div at top) */
+.head {
+  width: 100vw;
+  height: 10vh;
+  border-bottom: #0D0100 4px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* MAIN CONTENT (Everything below .head )*/
+.main-content {
+  height: 90vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*  L + R WING */
+.left-wing, .right-wing {
+  height: 90vh;
+  min-width: 10vw;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.left-wing__mid-box, .right-wing__mid-box {
+  background-color: #FF5C38;
+  height: 2vh;
+}
+
+.left-wing__bottom-box, .right-wing__bottom-box {
+  border-top: #0D0100 4px solid;
+  background-color: #FF5C38;
+  height: 30%;
+}
+
+/*  MIDDLE CONTENT */
+.middle-content {
+  height: 90vh;
+  border-right: #0D0100 4px solid;
+  border-left: #0D0100 4px solid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* TV STYLES */
+.tv {
+  height: 82vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  background-color: #0D0100;
+  overflow: hidden;
+}
+
+.tv__screen {
+  height: 82vh;
+  position: relative;
+  width: 75.7312%;
+}
+
+.tv__img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+}
+
+.tv__overlay {
+  height: inherit;
+  mix-blend-mode: multiply;
+}
+
+.tv__start-animation {
+  height: inherit;
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: -1.8vw;
+  overflow: hidden;
+}
+
+.tv__off-animation {
+  height: inherit;
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: -1.8vw;
+  overflow: hidden;
+}
+
+.tv__panel {
+  position: relative;
+  height: 82vh;
+  width: 24.2688%;
+  margin-left: -1px;
+}
+
+.control-panel {
+  height: inherit;
+  width: auto;
+}
+
+.power-switch {
+  position: absolute;
+  top: 10.5vh;
+  left: 0;
+  height: 4.5vh;
+}
+
+.power-switch:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.channel-switch {
+  position: absolute;
+  top: 7.65vh;
+  left: 0;
+  height: 9.3vh;
+}
+
+.channel-switch:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+.carousel__nav:hover .channel-switch {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.instructions {
+  position: absolute;
+  top: 48vh;
+  left: 0;
+  height: 29vh;
+}
+
+.instructions:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  cursor: pointer;
+}
+
+/* VOLUME SLIDER */
+#player {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  height: 6vh;
+  width: 99%;
+}
+
+#volume {
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+}
+
+#volume .ui-slider-range-min {
+  height: 5vh;
+  width: 5px;
+  position: absolute;
+  border: none;
+  outline: none;
+}
+
+#volume .ui-slider-handle {
+  height: 5vh;
+  width: 100%;
+  background: url("volume-switch.png") no-repeat;
+  background-size: auto 4.65vh;
+  position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#volume .ui-slider-handle:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+/* FOOTER */
+.foot__lbox, .foot__rbox {
+  background-color: #FF5C38;
+  height: 8vh;
+  border-top: #0D0100 4px solid;
+}
+
+.foot__center {
+  height: 8vh;
+  min-height: 20px;
+  border-top: #0D0100 4px solid;
+  padding-top: 6px;
+  background-color: #FF5C38;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+/*# sourceMappingURL=main.css.map */

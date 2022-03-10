@@ -1,0 +1,128 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  height: 82vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__track-container {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__track {
+  position: relative;
+  height: inherit;
+  list-style: none;
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: inherit;
+  width: 100%;
+}
+
+.carousel__image {
+  height: 82vh;
+}
+
+.carousel__button {
+  background: #0D0100;
+  height: 75px;
+  border: 0;
+  cursor: pointer;
+}
+
+.arrow {
+  height: 33px;
+  width: 21px;
+  fill: #F2EEE5;
+}
+
+.carousel__button:hover .arrow {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  fill: #FF5C38;
+}
+
+.carousel__button svg {
+  width: 21px;
+}
+
+.carousel__nav {
+  position: absolute;
+  background: transparent;
+  top: 5.8vh;
+  right: 0;
+  width: 39%;
+  height: 14vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.carousel__indicator {
+  background: transparent;
+  height: 2vh;
+  min-width: 10px;
+  width: 1.5vw;
+  border: 0;
+  cursor: pointer;
+}
+
+.two {
+  margin-top: -1.2vh;
+  margin-left: 1.7vw;
+}
+
+.three {
+  margin-left: 2.8vw;
+  margin-top: 1vh;
+  margin-bottom: 1.7vh;
+}
+
+.four {
+  margin-left: 2.8vw;
+  margin-bottom: 1.3vh;
+}
+
+.five {
+  margin-left: 1.7vw;
+}
+
+.carousel__indicator.current-slide {
+  color: #0D0100;
+}
+
+.is-hidden .arrow {
+  display: none;
+}
+
+.hidden-power-off .arrow {
+  display: none;
+}
+/*# sourceMappingURL=carousel.css.map */
