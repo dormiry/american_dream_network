@@ -151,7 +151,7 @@ html, body {
   position: absolute;
   width: auto;
   top: 0;
-  left: -1.8vw;
+  /* left: -1.8vw; */
   overflow: hidden;
 }
 
