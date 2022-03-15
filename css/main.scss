@@ -323,7 +323,7 @@ html, body {
       width: auto;
   }
 
-  #myBtn {
+  .myBtn {
     text-decoration: none;
     border: none;
     background-color: #FF5C38 ;
@@ -335,7 +335,7 @@ html, body {
     margin-bottom: 20px;
   }
 
-  #myBtn:hover {
+  .myBtn:hover {
       background-color: $color-type;
       transition-duration: 0.4s;
       cursor: pointer;
