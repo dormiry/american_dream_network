@@ -102,7 +102,7 @@
         <div class="right-wing">
             <!-- TV-GUIDE MODAL -->
         <div class="tv-guide">
-            <button class="myBtn"><h1>TV-GUIDE</h1></button>
+            <button id="myBtn" class="myBtn"><h1>TV-GUIDE</h1></button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <img src="assets/tv-guide.png" alt="" class="tv-guide-img">
@@ -129,7 +129,7 @@
 
 <script>  // TV GUIDE
     var modal = document.getElementById("myModal");
-    var btn = document.getElementByClassName("myBtn");
+    var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
     
     btn.onclick = function() {
