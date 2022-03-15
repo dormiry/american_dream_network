@@ -1,7 +1,3 @@
-alert("Sunday Update: Still need to finish the last 2 collages & add tv effect to all of them. Will work on this Monday! :) ");
-
-
-
 /* POWER SWITCH */
     const powerSwitch = document.querySelector('.power-switch');
     const turnOnAnimation = document.querySelector('.tv__start-animation');
@@ -79,3 +75,6 @@ $("#volume").slider({
     var myMedia = document.getElementById('myMedia');
     myMedia.volume = myVolume;
   }
+
+
+  // TV-GUIDE MODAL

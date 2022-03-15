@@ -12,7 +12,7 @@
 <body>
 
 <!-- HEAD -->
-    <div class="head"></div>
+    <div class="header"></div>
 
 <div class="main-content"> 
 
@@ -38,22 +38,22 @@
                             <div class="carousel__track-container">
                                 <ul class="carousel__track">
                                     <li class="carousel__slide current-slide">
-                                        <img class="carousel__image" src="assets/CH1_comp.png">
+                                        <img class="carousel__image" src="assets/CH1_comp.png" alt="">
                                     </li>
                                     <li class="carousel__slide">
-                                        <img class="carousel__image" src="assets/CH2_comp.png">
+                                        <img class="carousel__image" src="assets/CH2_comp.png" alt="">
                                     </li>
                                     <li class="carousel__slide">
-                                        <img class="carousel__image" src="assets/CH3_comp.png">
+                                        <img class="carousel__image" src="assets/CH3_comp.png" alt="">
                                     </li>
                                     <li class="carousel__slide">
-                                        <img class="carousel__image" src="assets/CH4_comp.png">
+                                        <img class="carousel__image" src="assets/CH4_comp.png" alt="">
                                     </li>
                                     <li class="carousel__slide">
-                                        <img class="carousel__image" src="assets/CH5_comp.png">
+                                        <img class="carousel__image" src="assets/CH5_comp.png" alt="">
                                     </li>
                                     <li class="carousel__slide">
-                                        <img class="carousel__image" src="assets/CH6_comp.png">
+                                        <img class="carousel__image" src="assets/CH6_comp.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -100,6 +100,16 @@
 
     <!-- R WING -->
         <div class="right-wing">
+            <!-- TV-GUIDE MODAL -->
+        <div class="tv-guide">
+            <button id="myBtn"><h1>TV-GUIDE</h1></button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <img src="assets/tv-guide.png" alt="" class="tv-guide-img">
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+        </div>
             <button class="carousel__button carousel__button--right hidden-power-off">
                 <svg class="arrow">
                     <path d="M4.45158e-05 32.5052L20.8962 16.2526L4.73575e-05 5.95152e-05L4.66471e-05 8.12617L10.4918 16.2526L4.52262e-05 24.379L4.45158e-05 32.5052Z"/>
@@ -117,6 +127,25 @@
 <script src="script/carousel.js"></script>
 <script src="script/main.js"></script>
 
+<script>  // TV GUIDE
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
 </body>
 </html>
 

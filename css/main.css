@@ -47,13 +47,17 @@ html, body {
 }
 
 /* HEAD (Long div at top) */
-.head {
+.header {
   width: 100vw;
   height: 10vh;
   border-bottom: #0D0100 4px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -151,7 +155,6 @@ html, body {
   position: absolute;
   width: auto;
   top: 0;
-  /* left: -1.8vw; */
   overflow: hidden;
 }
 
@@ -284,5 +287,88 @@ html, body {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+}
+
+/* TV-GUIDE MODAL */
+.tv-guide {
+  top: 0;
+  left: 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* The Close Button */
+.close {
+  color: #0D0100;
+  padding: 0 0 20px 10px;
+  margin: -50px 0 0 -30px;
+  width: 50px;
+  height: 100px;
+  color: #F2EEE5;
+  font-family: address-sans-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: bold;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #FF5C38;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tv-guide-img {
+  height: 90vh;
+  width: auto;
+}
+
+#myBtn {
+  text-decoration: none;
+  border: none;
+  background-color: #FF5C38;
+  min-width: 170px;
+  width: 100%;
+  min-height: 50px;
+  height: 5vh;
+  color: #F2EEE5;
+  margin-bottom: 20px;
+}
+
+#myBtn:hover {
+  background-color: #0D0100;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
